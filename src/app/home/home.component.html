@@ -7,42 +7,51 @@
       <div class="shadow rounded-4 mx-5 my-3 p-4 row d-flex align-items-center">
         <div class="col-12 col-md-5">
           <label class="form-label">
-          <h4 class="fw-bold">Seo</h4>
+          <h4 class="fw-bold pt-3">Seo</h4>
           </label>
           <p>Programació d'una web responsive completa</p>
         </div>
-        <h3 class="col-12 col-sm-5 col-md-3 d-flex justify-content-center fw-bold">300€</h3>
+        <h3 class="col-12 col-sm-5 col-md-3 d-flex justify-content-center">
+          <span class="price-bold">300</span>
+          <span class="currency">€</span>
+        </h3>
         <div class="col-12 col-sm-5 col-md-3 d-flex justify-content-end">
-          <input class="form-check-input me-3" formControlName="seo" type="checkbox"/>
+          <input class="form-check-input me-3 custom-checkbox" formControlName="seo" type="checkbox"/>
           <label for="checkInfo">Afegir</label>
         </div>
       </div>
       <div class="shadow rounded-4 mx-5 my-3 p-4 row d-flex align-items-center">
         <div class="col-12 col-md-5">
           <label class="form-label">
-          <h4 class="fw-bold">Ads</h4>
+          <h4 class="fw-bold pt-3">Ads</h4>
           </label>
           <p>Programació d'una web responsive completa</p>
         </div>
-        <h3 class="col-12 col-sm-5 col-md-3 d-flex justify-content-center fw-bold">400€</h3>
+        <h3 class="col-12 col-sm-5 col-md-3 d-flex justify-content-center">
+          <span class="price-bold">400</span>
+          <span class="currency">€</span>
+        </h3>
         <div class="col-12 col-sm-5 col-md-3 d-flex justify-content-end">
-          <input class="form-check-input me-3" formControlName="ads" type="checkbox"/>
+          <input class="form-check-input me-3 custom-checkbox" formControlName="ads" type="checkbox"/>
           <label for="checkInfo">Afegir</label>
         </div>
       </div>
-      <div class="shadow rounded-4 mx-5 my-3 p-4 row d-flex align-items-center">
+      <div class=" shadow rounded-4 mx-5 my-3 p-4 row d-flex align-items-center" id="webDiv">
         <div class="col-12 col-md-5">
           <label class="form-label">
-          <h4 class="fw-bold">Web</h4>
+          <h4 class="fw-bold pt-3">Web</h4>
           </label>
           <p>Programació d'una web responsive completa</p>
         </div>
-        <h3 class="col-12 col-sm-5 col-md-3 d-flex justify-content-center fw-bold">500€</h3>
+        <h3 class="col-12 col-sm-5 col-md-3 d-flex justify-content-center">
+          <span class="price-bold">500</span>
+          <span class="currency">€</span>
+        </h3>
         <div class="col-12 col-sm-5 col-md-3 d-flex justify-content-end">
-          <input class="form-check-input me-3" formControlName="web" type="checkbox"/>
+          <input class="form-check-input me-3 custom-checkbox" formControlName="web" type="checkbox"/>
           <label for="checkInfo">Afegir</label>
         </div>
-
+        <app-panel id="panel"></app-panel>
       </div>
     </form>
   </div>
@@ -50,11 +59,13 @@
     <div class="col-12 col-md-5">
       <div class="row align-items-end">
         <div class="justify-content-end my-3 p-3 row">
-          <h3 class="col-9 me-1 justify-content-center fw-bold text-nowrap">Preu pressupostat: {{ presupuestoTotal }} €</h3>
+          <h3 class="col-9 me-1 justify-content-center fw-bold text-nowrap">Preu pressupostat: {{ totalBudget }} €</h3>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<app-welcome></app-welcome>
+<app-welcome><!--Request Budget--></app-welcome>
+
+<!--Budgetlist-->

@@ -1,0 +1,33 @@
+.round-button {
+  border: 1.5px solid grey;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  color: grey;
+  background-color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.number-box {
+  border: 1px solid grey;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 5px;
+  width: 55px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

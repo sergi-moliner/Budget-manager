@@ -3,5 +3,22 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 11rem;
-  color: rgb(68, 19, 1)
+  color: rgb(56, 15, 0)
+}
+.custom-checkbox:checked {
+  background-color: #41B06E;
+  border-color: #41B06E;
+}
+.border-green {
+  border: 2px solid #41B06E;
+}
+.currency {
+  margin-left: 7px;
+  font-size: 1em;
+  padding-top: 10px;
+}
+
+.price-bold {
+  font-weight: 700;
+  font-size: 40px;
 }
