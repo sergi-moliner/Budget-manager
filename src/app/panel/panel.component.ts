@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BudgetService } from '../services/budget.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-panel',
@@ -10,10 +11,16 @@ import { BudgetService } from '../services/budget.service';
   styleUrl: './panel.component.css'
 })
 export class PanelComponent {
+  @ViewChild('content1') content1!: TemplateRef<any>;
+  @ViewChild('content2') content2!: TemplateRef<any>;
+
+  openModal(content: TemplateRef<any>) {
+		this.modalService.open(content, { centered: true });
+	}
 
   panelForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private budgetService: BudgetService) {
+  constructor(private fb: FormBuilder, private budgetService: BudgetService, private modalService: NgbModal) {
     this.panelForm = this.fb.group({
       pages: [1, [Validators.required, Validators.min(1)]],
       idioms: [1, [Validators.required, Validators.min(1)]]
@@ -49,3 +56,4 @@ export class PanelComponent {
     this.budgetService.setValues(pages, idioms);
   }
 }
+
