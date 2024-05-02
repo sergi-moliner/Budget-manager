@@ -4,7 +4,7 @@
       <ng-template #content1>
         <div class="text-center mt-5 mb-5 me-5 ms-5">
           <h3 class="fw-bold mt-3 mb-2 pb-3">Número de pàgines</h3>
-          <p class=" ">Afegeix les pàgines que tindrà el teu projecte.
+          <p>Afegeix les pàgines que tindrà el teu projecte.
             El cost de cada pàgina és de 30€.
           </p>
       </div>
@@ -15,7 +15,6 @@
     <span class="number-box">{{ panelForm.get('pages')?.value }}</span>
     <button type="button" class="round-button" (click)="increment('pages')">+</button>
   </div>
-
   <div class="form-group">
     <button class="btn btn-outline-primary mb-2 me-2 mt-3 info-button" (click)="openModal(content2)">i
       <ng-template #content2>
@@ -32,5 +31,4 @@
     <span class="number-box">{{ panelForm.get('idioms')?.value }}</span>
     <button type="button" class="round-button ps-2" (click)="increment('idioms')">+</button>
   </div>
-
 </form>

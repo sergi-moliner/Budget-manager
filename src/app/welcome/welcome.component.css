@@ -1,0 +1,26 @@
+.btn-submit{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    opacity: 0.9;
+}
+
+.btn-submit:focus,
+.bt-submit:active,
+.btn-submit:hover {
+    opacity: 1;
+    background-color: #439a46;
+}
+
+.form-control{
+  padding: 10px;
+}
+.form-control::placeholder{
+  color: #ccc;
+}
+.dotted-line{
+  border: 2px dashed #ccc;
+}

@@ -5,11 +5,12 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { PanelComponent } from '../panel/panel.component';
 import { CommonModule } from '@angular/common';
 import { BudgetService } from '../services/budget.service';
+import { BudgetListComponent } from '../budget-list/budget-list.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [WelcomeComponent, ReactiveFormsModule, PanelComponent, CommonModule],
+  imports: [WelcomeComponent, ReactiveFormsModule, PanelComponent, CommonModule, BudgetListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
