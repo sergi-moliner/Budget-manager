@@ -8,11 +8,20 @@ export class BudgetService {
 
   public totalBudgetSubject = new BehaviorSubject<number>(0);
   public checkboxChanged = new BehaviorSubject<boolean>(false);
+  public budgets: any[] = [];
 
   public pages: number = 0;
   public idioms: number = 0;
   public previousPages: number = 0;
   public previousIdioms: number = 0;
+
+  saveBudget(budget: any) {
+    this.budgets.push(budget);
+  }
+
+  getBudgets() {
+    return this.budgets;
+  }
 
   setBudget(presupuesto: number) {
     this.totalBudgetSubject.next(presupuesto);

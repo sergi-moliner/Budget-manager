@@ -1,0 +1,10 @@
+.currency {
+  font-size: 30px;
+  padding-top: 10px;
+  font-weight: 100;
+}
+
+.price-bold {
+  font-weight: 700;
+  font-size: 40px;
+}

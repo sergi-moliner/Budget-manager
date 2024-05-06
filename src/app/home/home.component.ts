@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WelcomeComponent } from '../welcome/welcome.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { PanelComponent } from '../panel/panel.component';
 import { CommonModule } from '@angular/common';
 import { BudgetService } from '../services/budget.service';
@@ -26,14 +26,12 @@ export class HomeComponent implements OnInit {
     document.getElementById('panel')!.style.display = 'none';
   }
 
-  constructor(private budgetService: BudgetService) {
-
-    this.form = new FormGroup({
-      'seo': new FormControl(false),
-      'ads': new FormControl(false),
-      'web': new FormControl(false)
+  constructor(private fb: FormBuilder, private budgetService: BudgetService) {
+    this.form = this.fb.group({
+      seo: [false],
+      ads: [false],
+      web: [false]
     });
-
     this.form.get('seo')!.valueChanges.subscribe(checked => {
       this.totalBudget += checked ? this.priceSeo : -this.priceSeo;
       this.budgetService.setBudget(this.totalBudget);
@@ -55,6 +53,7 @@ export class HomeComponent implements OnInit {
         webDiv?.classList.remove('border-green');
       }
     });
+
 
     this.budgetService.totalBudgetSubject.subscribe((total: number) => {
       this.totalBudget = total;

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="shadow rounded-4 mx-5 my-3 p-4">
+      <div class="row d-flex align-items-center">
+        <div class="col-12 col-md-5">
+          <label class="form-label">
+            <h3 class="fw-bold pt-3 pb-4">Demanar pressupost</h3>
+          </label>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center align-items-center">
+        <form [formGroup]="budgetForm" (ngSubmit)="onSubmit()" class="row">
+          <div class="col-12 col-md text-center">
+            <input type="text" class="form-control mb-3 me-3" placeholder="Nom" formControlName="name" id="name">
+            <div class="error-message text-danger">{{ getErrorMessage('name') }}</div>
+          </div>
+          <div class="col-12 col-md text-center">
+            <input type="number" class="form-control mb-3 me-3" placeholder="Telèfon" formControlName="phone" id="phone">
+            <div class="error-message text-danger">{{ getErrorMessage('phone') }}</div>
+          </div>
+          <div class="col-12 col-md text-center">
+            <input type="email" class="form-control mb-3 me-3" placeholder="Email" formControlName="email" id="email">
+            <div class="error-message text-danger">{{ getErrorMessage('email') }}</div>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <button type="submit" class="btn btn-primary btn-submit">Sol·licitar pressupost<i class="bi bi-arrow-right ps-2"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  <hr class="mx-5 my-3 mt-5 mb-5 dotted-line">
+</div>
