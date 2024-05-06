@@ -17,12 +17,13 @@ https://github.com/sergi-moliner/Sprint-5
 
 3. Open the project in your preferred code editor.
 
-4. Start a local development server, run this code in the console:
-
+## 📦 Installation
+To edit the code, you need to install the necessary Node.js modules. Run the following command:
 ```bash
-ng serve --open
+npm install
 ```
-The application will automatically reload if you change any of the source files.
+## 🖥️ Development Server
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 ## 🏗️ Code Generation
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
